@@ -1,35 +1,21 @@
 package edu.tomer;
 
+import java.time.LocalDateTime;
+
 /**
  * Created by hackeru on 13/02/2017.
  */
-public class Librarian {
-    private String firstName;
-    private String lastName;
+public class Librarian extends Person{
+    private LocalDateTime hireDate;
 
+    //Constructor
     public Librarian() {
-        this.firstName = IO.getString("Enter firstName:");
-        this.lastName = IO.getString("Enter lastName:");
+        super();//call the Base Class Constructor
+        this.hireDate = LocalDateTime.now();
     }
 
-    public Librarian(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public Librarian(String firstName, String lastName, String socialID, LocalDateTime hireDate) {
+        super(firstName, lastName, socialID);
+        this.hireDate = hireDate;
     }
 }
