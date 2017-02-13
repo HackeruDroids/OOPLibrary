@@ -24,7 +24,7 @@ public class Book {
 
     //Methods:
     public void print() {
-        System.out.printf("Title: %s\nAuthor: %s\nPrice: %f\n",
+        System.out.printf("Title: %s\nAuthor: %s\nPrice: %3.2f\n",
                 title, author, priceAfterVAT()
         );
     }
